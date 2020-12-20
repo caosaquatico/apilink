@@ -9,7 +9,9 @@ app.use(express.json())
 
 
 //rotas
-app.get('/', function(req, res) {})
+app.get('/', function(req, res) {
+    res.send('ok')
+})
 
 app.post('/link', urlencodeParser, (req, res) => {
     var nome = req.body.nome
