@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
     res.send('ok')
 })
 
-app.post('/link', urlencodeParser, (req, res) => {
+app.post('/', urlencodeParser, (req, res) => {
     var nome = req.body.nome
     var cod = req.body.cod
     console.log(req.body)
