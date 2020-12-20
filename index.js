@@ -24,9 +24,9 @@ app.post('/', urlencodeParser, (req, res) => {
 })
 
 
-app.get('/link/:modelo/:cod', (req, res) => {
+app.get('/link/:modelo', (req, res) => {
     var nome = req.params.modelo
-    var cod = req.params.cod
+    var cod = 1
     console.log(req.body)
     site.videosite(nome, cod)
         .then((modelo) => {
