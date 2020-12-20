@@ -23,6 +23,18 @@ app.post('/', urlencodeParser, (req, res) => {
         })
 })
 
+
+app.get('/link/:modelo/:cod', (req, res) => {
+    var nome = req.params.modelo
+    var cod = req.params.cod
+    console.log(req.body)
+    site.videosite(nome, cod)
+        .then((modelo) => {
+            res.json(modelo)
+        })
+
+})
+
 //inicializa o servidor
 app.listen(port, () => {
     console.log('Servidor escutando na porta %d', port)
